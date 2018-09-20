@@ -1,0 +1,192 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 0 3rem 3rem;
+  color: #363636; }
+
+.heading-secondary {
+  font-size: 5.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, rgba(8, 147, 217, 0.8), rgba(34, 143, 197, 0.8));
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem;
+  transition: all .2s;
+  cursor: pointer; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, rgba(8, 147, 217, 0.8), rgba(34, 143, 197, 0.8));
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent;
+  transform: skewY(2deg) skewX(15deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+  cursor: pointer; }
+
+.paragraph {
+  font-size: 1.6rem;
+  text-align: justify; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-meduim {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.nav {
+  width: 100%;
+  height: 60px;
+  background: #0893d9; }
+
+.navbar {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 0;
+  height: 60px; }
+
+.navbar-nav {
+  display: flex;
+  justify-content: center; }
+
+.navbar-nav .navbar__link {
+  text-decoration: none;
+  color: #fff;
+  line-height: 60px;
+  display: inline-block;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  padding: 0 60px; }
+
+.navbar-nav .navbar__link:hover {
+  background: #363636; }
+
+.logo {
+  margin: 0 20px; }
+
+.composition__photo {
+  width: 55%;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  transition: all .2s;
+  outline-offset: 2rem; }
+  .composition__photo:hover {
+    transform: scale(1.25);
+    -ms-transform: skew(10deg, 0deg);
+    /* IE 9 */
+    -webkit-transform: skew(10deg, 0deg);
+    /* Safari */
+    transform: skew(10deg, 0deg);
+    /* Standard syntax */
+    box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+    outline: 1.5rem solid #0893d9;
+    width: 65%; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(8, 147, 217, 0.8), rgba(34, 143, 197, 0.8)), url(../img/notebook.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header-primary {
+    min-height: 100vh;
+    width: 114rem;
+    margin: 0 auto;
+    position: relative; }
+    .header-primary--main {
+      height: 91px;
+      width: 383px;
+      margin: 74px auto 22px; }
+      .header-primary--main__img {
+        width: 100%;
+        display: inline-block; }
+    .header-primary--sub {
+      opacity: 0.9;
+      height: 100vh;
+      background-image: url(../img/notebook-meduim.png);
+      background-position: top;
+      background-size: contain;
+      width: 100%;
+      -webkit-box-shadow: 1px 0px 15px 4px #000000;
+      box-shadow: 1px 0px 15px 4px #000000; }
+      .header-primary--sub__title {
+        padding-top: 2.5rem;
+        font-size: 9rem;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        line-height: 78px;
+        width: 30%; }
+        .header-primary--sub__titlespan {
+          display: block; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh; }
+
+.section-work {
+  padding: 20rem 0;
+  margin-top: -11.5rem;
+  background-image: linear-gradient(to right bottom, rgba(8, 147, 217, 0.8), rgba(34, 143, 197, 0.8)), url(../img/cup-of-coffee.jpg);
+  background-size: cover;
+  background-position: top;
+  transform: skewY(-7deg); }
+  .section-work > * {
+    transform: skewY(7deg); }

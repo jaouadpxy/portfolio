@@ -1,0 +1,58 @@
+
+.header {
+	height: 95vh;
+	background-image: linear-gradient(to right bottom, rgba($color-primary, 0.8), rgba($color-primary-dark, 0.8)),
+		url(../img/notebook.jpg);
+	background-size: cover;
+	background-position: top;
+	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+	&-primary {
+		min-height: 100vh;
+		width: $grid-with;
+		margin: 0 auto;
+		position: relative;
+
+		&--main {
+			height: 91px;
+			width: 383px;
+			margin: 74px auto 22px;
+
+			&__img {
+				width: 100%;
+				display: inline-block;
+			}
+		}
+
+		&--sub {
+			opacity: 0.9;
+
+			height: 100vh;
+			background-image: url(../img/notebook-meduim.png);
+			background-position: top;
+			background-size: contain;
+			width: 100%;
+
+			-webkit-box-shadow: 1px 0px 15px 4px #000000;
+            box-shadow: 1px 0px 15px 4px #000000;
+            
+            &__title{
+           
+                padding-top: 2.5rem;
+                font-size: 9rem;
+                font-family: "Arial", sans-serif;
+                font-weight: bold;
+                color: $color-white;
+                text-align: center;
+                line-height: 78px;
+                width: 30%;
+
+                &span{
+ 
+                    display: block;
+                }
+
+            }
+		}
+	}
+}

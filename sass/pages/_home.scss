@@ -1,0 +1,26 @@
+.section-about{
+background-color: $color-grey-light-1;
+padding: 25rem 0;
+margin-top:-20vh;
+
+}
+
+
+.section-work {
+
+  padding: 20rem 0;
+  
+  margin-top:-11.5rem;
+  
+	background-image: linear-gradient(to right bottom, rgba($color-primary, 0.8), rgba($color-primary-dark, 0.8)),
+		url(../img/cup-of-coffee.jpg);
+	background-size: cover;
+	background-position: top;
+    transform: skewY(-7deg);
+    
+    & > * {
+
+        transform: skewY(7deg);
+    }
+
+}
