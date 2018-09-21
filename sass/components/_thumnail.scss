@@ -1,4 +1,5 @@
 .work {
+    
     // functionality
     perspective: 150rem;
     -moz-perspective: 150rem;
@@ -23,12 +24,13 @@
 
         &--front{
 
-            background-color: orangered;
+           
         }
 
         &--back {
+            position: relative;
 
-         background: green;
+        
          transform: rotateY(180deg);
 
         //  &-1 {
