@@ -1,0 +1,78 @@
+.work {
+    // functionality
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 25rem;
+    
+    &__side{
+        background-color: orangered;
+        color: #fff;
+        font-size: 2rem;
+        height: 30rem;
+        transition: all .8s ease;
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+
+        &--front{
+
+            background-color: orangered;
+        }
+
+        &--back {
+
+         background: green;
+         transform: rotateY(180deg);
+
+        //  &-1 {
+
+        //  }
+
+        }
+   
+    }
+
+   
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg); 
+        
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0); 
+        
+    }
+
+
+    &__picture {
+        background-size: cover;
+        height:30rem ;
+
+        &--1{
+          background-image: url(../img/fuzeau.jpg);
+         
+          
+        
+        }
+
+        &--2{
+            background-image:linear-gradient(to right bottom, rgba($color-primary, 0.8), rgba($color-primary-dark, 0.8)), url(../img/fuzeau-back.jpg);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+            
+          
+          }
+
+    }
+}

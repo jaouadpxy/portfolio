@@ -1,20 +1,29 @@
+.container{
+
+    max-width: $grid-with;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .5);
+    margin: 0 auto;
+    background-image: linear-gradient(to right bottom, #2b2b2b, #a1a1a1);
+}
+
+
 .section-about{
 background-color: $color-grey-light-1;
-padding: 25rem 0;
+padding: 25rem 5rem;
 margin-top:-20vh;
 
 }
 
 
 .section-work {
+ 
+  padding: 20rem 5rem 50rem 5rem;
 
-  padding: 20rem 0;
   
   margin-top:-11.5rem;
   
-	background-image: linear-gradient(to right bottom, rgba($color-primary, 0.8), rgba($color-primary-dark, 0.8)),
-		url(../img/cup-of-coffee.jpg);
-	background-size: cover;
+	background: url(../img/work-bg.jpg) repeat 9px 0 transparent;
+	
 	background-position: top;
     transform: skewY(-7deg);
     
@@ -23,4 +32,35 @@ margin-top:-20vh;
         transform: skewY(7deg);
     }
 
+}
+
+.section-contact{
+
+    padding: 15rem 5rem;
+    background-image:linear-gradient(to right bottom, $color-primary, $color-primary-dark);
+
+    margin-top:-7rem;
+}
+
+
+
+
+.contact {
+    background-image: linear-gradient(105deg, 
+                                    rgba($color-white, .9) 0%,
+                                    rgba($color-white, .9) 55%,
+                                    transparent 50%) ,
+                            url(../img/contact-bg.jpg);
+    background-size: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+
+    height: 50rem;
+    
+    margin:0 auto;
+
+    &__form {
+        width: 50%;
+        padding: 6rem;
+    }
 }
