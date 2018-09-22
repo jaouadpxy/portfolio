@@ -7,7 +7,8 @@
     height: 25rem;
     
     &__side{
-        background-color: orangered;
+        background-image: linear-gradient(to right, rgba($color-primary, 0.8), rgba($color-white, 0.8)),
+        url(../img/fuzeau-back.jpg);
         color: #fff;
         font-size: 2rem;
         height: 30rem;
@@ -20,7 +21,18 @@
         border-radius: 3px;
         overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        .btn{
 
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            &:hover {
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
 
         &--front{
 
@@ -29,14 +41,7 @@
 
         &--back {
             position: relative;
-
-        
-         transform: rotateY(180deg);
-
-        //  &-1 {
-
-        //  }
-
+            transform: rotateY(180deg);
         }
    
     }
@@ -60,6 +65,9 @@
 
         &--1{
           background-image: url(../img/fuzeau.jpg);
+          width: 100%;
+          background-size: 100% 100%;
+
          
           
         
@@ -71,9 +79,6 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            
-            
-          
           }
 
     }

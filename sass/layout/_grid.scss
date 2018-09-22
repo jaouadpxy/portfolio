@@ -1,6 +1,10 @@
 
 
 .row{
+    background-image: url(../img/plane.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
   
     max-width: $grid-width;
     
@@ -16,8 +20,14 @@
         float: left;
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+           
+            
             
         }
+        // @include respond(tab-port) {
+        //     width: 100% !important;
+        // }
+        
      }
 
     .col-1-of-2 {
@@ -61,3 +71,19 @@
     
 }
 
+
+
+@media screen and (max-width: 600px) {
+	[class^="col-"] {
+
+        width: 100% !important;
+        margin-right:0;
+        margin-bottom: $gutter-vertical-small !important;
+
+        
+    }
+    .hidework{
+        display: none;
+    }
+   
+}

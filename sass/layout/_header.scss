@@ -1,18 +1,22 @@
 
 .header {
 	
-	height: 95vh;
+	z-index: 99999;
+	height: 100vh;
 	background-image: linear-gradient(to right bottom, rgba($color-primary, 0.8), rgba($color-primary-dark, 0.8)),
 		url(../img/notebook.jpg);
 	background-size: cover;
-	background-position: top;
+	background-position: center;
+    background-repeat: no-repeat;
+	//background-position: top;
 	-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-	
+	position: relative;
+	width: 100%;
 	
 
 	&-primary {
-		
+		//display: none;
 		min-height: 100vh;
 		width: $grid-width;
 		margin: 0 auto;
@@ -23,12 +27,14 @@
 		&--main {
 			height: 9.1rem;
 			width: 38.3em;
-			margin: 7.4rem auto 2.2rem;
+			margin: 12rem auto 3.2rem;
+			background-image: url(../img/heading-title.png);
+			background-repeat: no-repeat;
 
-			&__img {
-				max-width: 100%;
-				height: auto;
-			}
+			// &__img {
+			// 	max-width: 100%;
+			// 	height: auto;
+			// }
 		}
 
 		&--sub {
@@ -63,8 +69,34 @@
 
             }
 		}
+		
 	}
 }
+
+.secondmain{
+	//display: none;
+	
+	height: 25rem;
+	max-width: 90%;
+	margin: 0 auto  10rem;
+
+	padding: 2rem 0 5rem;
+	text-align: center;
+
+	 p {
+		background-position:top;
+		background-repeat: no-repeat;
+		background-image: url(../img/look-good.png);
+		width: 100%;
+		margin: 0 auto 5rem;
+		font-size: 2rem;
+		font-family: arial,sans-serif;
+		padding:6rem 0 8rem;
+		
+		color:#fff;
+	}
+}
+
 
 
 @media screen and (max-width: 1200px){
@@ -92,5 +124,24 @@
 	.header-primary--sub{
 		background-image: url(../img/notebook640.jpg);
 		height: 95vh;
+	}
+	.secondmain {
+       p{
+		background-image: url(../img/look-good-medium.png);
+		font-size:1.5rem;
+	   }
+	}
+}
+
+@media screen and (max-width: 600px){
+	
+	.secondmain {
+		padding-bottom:0;
+		margin-bottom:0;
+       p{
+		background-image: url(../img/look-good-small.png);
+		font-size:1.25rem;
+		padding-top:3rem;
+	   }
 	}
 }
