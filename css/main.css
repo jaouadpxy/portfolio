@@ -51,8 +51,7 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  color: #363636;
-  background-color: #696463; }
+  color: #363636; }
 
 .heading-secondary {
   font-size: 5.5rem;
@@ -497,7 +496,7 @@ body {
 
 .header {
   z-index: 99999;
-  height: 100vh;
+  height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(18, 133, 190, 0.8), rgba(83, 201, 238, 0.8)), url(../img/notebook.jpg);
   background-size: cover;
   background-position: center;
@@ -505,30 +504,38 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
-  width: 100%; }
+  width: 100%;
+  padding-top: 6rem; }
+  .header__main {
+    min-height: 9.1rem;
+    max-width: 39.3rem;
+    width: 100%;
+    margin: 6rem auto 3.2rem;
+    background-image: url(../img/heading-title.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    display: none; }
   .header-primary {
     min-height: 100vh;
     width: 114rem;
-    margin: 0 auto;
-    overflow: hidden; }
-    .header-primary--main {
-      height: 9.1rem;
-      width: 38.3em;
-      margin: 12rem auto 3.2rem;
-      background-image: url(../img/heading-title.png);
-      background-repeat: no-repeat; }
+    margin: 6rem auto 0;
+    position: relative; }
     .header-primary--sub {
       opacity: 0.9;
       height: 100vh;
       background-image: url(../img/notebook-meduim.png);
-      background-position: top;
-      background-size: cover;
+      background-position: center;
+      background-size: 100% 100%;
       width: 100%;
-      overflow: hidden;
+      background-repeat: no-repeat;
       display: inline-block;
       -webkit-box-shadow: 1px 0px 15px 4px #000000;
       box-shadow: 1px 0px 15px 4px #000000; }
       .header-primary--sub__title {
+        position: absolute;
+        top: 0;
+        left: 0;
         padding-top: 2.5rem;
         font-size: 9rem;
         font-family: "Arial", sans-serif;
@@ -564,7 +571,9 @@ body {
     font-size: 6rem;
     line-height: 6rem; }
   .header-primary--sub {
-    height: 95vh; } }
+    height: 95vh; }
+  .header__main .big {
+    display: block; } }
 
 @media screen and (max-width: 1000px) {
   .header-primary {
@@ -586,7 +595,10 @@ body {
     .secondmain p {
       background-image: url(../img/look-good-small.png);
       font-size: 1.25rem;
-      padding-top: 3rem; } }
+      padding-top: 3rem; }
+  .header__main {
+    width: 65% !important;
+    margin-top: 3rem; } }
 
 .footer {
   background-color: #333;
