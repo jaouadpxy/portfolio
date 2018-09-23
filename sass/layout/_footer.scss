@@ -62,3 +62,37 @@
     }
 }
 
+@media screen and (max-width: 900px) {
+	.footer {
+              padding: 8rem 2rem;
+     
+              &__navigation {
+                  width: 100%;
+                  text-align: center;
+              }
+            &__copyright {
+                width: 100%;
+                float: none;
+            }
+    }
+
+        
+}
+
+@media screen and (max-width: 600px) {
+	.footer {
+              padding: 8rem 0;
+     
+              .footer__navigation {
+                  width: 100%;
+                  text-align: center;
+                  padding-bottom: 3rem;
+              }
+    }
+
+        
+}
+
+
+    
+   

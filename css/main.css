@@ -47,6 +47,42 @@ body {
   body {
     padding: 0; } }
 
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 56.25%; } }
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 50%; } }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-14rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -457,6 +493,50 @@ body {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1); }
 
+.sticky-container {
+  padding: 0px;
+  margin: 0px;
+  position: fixed;
+  right: -170px;
+  top: 140px;
+  width: 210px;
+  z-index: 1000000000; }
+
+.sticky li {
+  list-style-type: none;
+  background-color: #eee;
+  color: #efefef;
+  height: 43px;
+  padding: 0px;
+  margin: 0px 0px 1px 0px;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  z-index: 99999999; }
+
+.sticky li:hover {
+  margin-left: -115px; }
+
+.sticky li img {
+  float: left;
+  margin: 5px 4px;
+  margin-right: 5px; }
+
+.sticky li p {
+  padding-top: 5px;
+  margin: 0px;
+  line-height: 16px;
+  font-size: 11px; }
+
+.sticky li p a {
+  text-decoration: none;
+  color: #2C3539; }
+
+.sticky li p a:hover {
+  text-decoration: underline; }
+
 .row {
   background-image: url(../img/plane.png);
   background-repeat: no-repeat;
@@ -494,6 +574,11 @@ body {
   .hidework {
     display: none; } }
 
+@media screen and (max-width: 900px) {
+  .row {
+    max-width: 50rem;
+    padding: 0 3rem; } }
+
 .header {
   z-index: 99999;
   height: 95vh;
@@ -514,38 +599,57 @@ body {
     background-image: url(../img/heading-title.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-position: center center;
-    display: none; }
+    background-position: center center; }
+  .header__text-box {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    transform: translate(-50%, -50%); }
   .header-primary {
     min-height: 100vh;
     width: 114rem;
     margin: 6rem auto 0;
-    position: relative; }
-    .header-primary--sub {
+    position: relative;
+    backface-visibility: hidden; }
+    .header-primary__main {
       opacity: 0.9;
-      height: 100vh;
+      height: 95vh;
       background-image: url(../img/notebook-meduim.png);
       background-position: center;
       background-size: 100% 100%;
+      max-width: 114rem;
       width: 100%;
       background-repeat: no-repeat;
       display: inline-block;
       -webkit-box-shadow: 1px 0px 15px 4px #000000;
       box-shadow: 1px 0px 15px 4px #000000; }
-      .header-primary--sub__title {
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding-top: 2.5rem;
-        font-size: 9rem;
-        font-family: "Arial", sans-serif;
-        font-weight: bold;
-        color: #fff;
-        text-align: center;
-        line-height: 7.8rem;
-        width: 30%; }
-        .header-primary--sub__titlespan {
-          display: block; }
+
+.heading-primary span {
+  display: block;
+  font-size: 6.5rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: .5rem;
+  line-height: 7rem; }
+
+.heading-primary :nth-child(1) {
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  position: relative;
+  left: 2.5rem; }
+
+.heading-primary :nth-child(2) {
+  animation-name: moveInLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  position: relative;
+  left: 9rem; }
+
+.heading-primary :nth-child(3) {
+  animation-name: moveInRight;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out; }
 
 .secondmain {
   height: 25rem;
@@ -566,7 +670,7 @@ body {
 
 @media screen and (max-width: 1200px) {
   .header-primary {
-    width: 90em; }
+    width: 90rem; }
   .header-primary--sub__title {
     font-size: 6rem;
     line-height: 6rem; }
@@ -586,7 +690,15 @@ body {
     height: 95vh; }
   .secondmain p {
     background-image: url(../img/look-good-medium.png);
-    font-size: 1.5rem; } }
+    font-size: 1.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .heading-primary span {
+    font-size: 5rem;
+    line-height: 6rem; } }
 
 @media screen and (max-width: 600px) {
   .secondmain {
@@ -639,12 +751,30 @@ body {
     float: right;
     text-align: justify; }
 
+@media screen and (max-width: 900px) {
+  .footer {
+    padding: 8rem 2rem; }
+    .footer__navigation {
+      width: 100%;
+      text-align: center; }
+    .footer__copyright {
+      width: 100%;
+      float: none; } }
+
+@media screen and (max-width: 600px) {
+  .footer {
+    padding: 8rem 0; }
+    .footer .footer__navigation {
+      width: 100%;
+      text-align: center;
+      padding-bottom: 3rem; } }
+
 .container {
   position: relative;
   max-width: 114rem;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1.7rem 4rem rgba(0, 0, 0, 0.5);
   margin: 0 auto;
-  background-image: linear-gradient(to right bottom, rgba(43, 43, 43, 0.8), rgba(43, 43, 43, 0.8)), url(../img/plane.png);
+  background: #2b2b2b;
   padding: 20rem 0 7rem;
   margin-top: -19rem;
   background-repeat: no-repeat;
@@ -681,8 +811,29 @@ body {
   background-size: 100%;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
-  height: 50rem;
   margin: 0 auto; }
   .contact__form {
     width: 50%;
     padding: 6rem; }
+
+.section-contact .heading-secondary {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)); }
+
+@media screen and (max-width: 900px) {
+  .contact {
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../img/contact-bg.jpg);
+    background-size: cover; }
+    .contact__form {
+      width: 65%; } }
+
+@media screen and (max-width: 600px) {
+  .contact {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(../img/contact-bg.jpg); }
+    .contact__form {
+      width: 100%; }
+    .contact .btn--green {
+      height: 4rem;
+      line-height: 1rem; }
+    .contact .section-about .heading-secondary {
+      font-size: 1.5rem;
+      line-height: 1rem; } }

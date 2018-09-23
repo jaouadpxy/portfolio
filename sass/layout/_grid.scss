@@ -87,3 +87,12 @@
     }
    
 }
+
+@media screen and (max-width: 900px) {
+	.row {
+        max-width: 50rem;
+        padding:0 3rem;
+    }
+   
+}
+
