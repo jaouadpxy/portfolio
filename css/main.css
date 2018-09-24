@@ -159,7 +159,7 @@ body {
         display: inline-block;
         font-family: "Lato", sans-serif;
         font-weight: 400;
-        font-size: 1.5rem;
+        font-size: 2rem;
         width: 23.5rem; }
         .nav__navbar--item__link:hover {
           background: #363636;
@@ -169,7 +169,7 @@ body {
   color: #fff;
   width: 100%;
   text-align: right;
-  padding: 10px 20px;
+  padding: 5px 20px;
   font-size: 25px;
   display: none;
   cursor: pointer; }
@@ -236,7 +236,7 @@ body {
   .nav .logo {
     width: 14rem;
     height: 10.5rem;
-    top: 8px;
+    top: 6px;
     z-index: 99999; } }
 
 @media screen and (max-width: 600px) {
@@ -245,7 +245,7 @@ body {
   .nav .logo {
     width: 9.2rem;
     height: 7rem;
-    top: 24px;
+    top: 20px;
     z-index: 99999; }
   .toggle {
     display: block; }
@@ -538,9 +538,6 @@ body {
   text-decoration: underline; }
 
 .row {
-  background-image: url(../img/plane.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   max-width: 114rem;
   margin: 0 auto; }
   .row:not(:last-child) {
@@ -681,7 +678,8 @@ body {
 
 @media screen and (max-width: 1000px) {
   .header-primary {
-    width: 75em; }
+    max-width: 75em;
+    width: 100%; }
   .header-primary--sub__title {
     font-size: 6rem;
     line-height: 6rem; }
@@ -700,6 +698,10 @@ body {
     font-size: 5rem;
     line-height: 6rem; } }
 
+@media screen and (max-width: 900px) {
+  .secondmain {
+    padding-top: 7rem; } }
+
 @media screen and (max-width: 600px) {
   .secondmain {
     padding-bottom: 0;
@@ -710,7 +712,11 @@ body {
       padding-top: 3rem; }
   .header__main {
     width: 65% !important;
-    margin-top: 3rem; } }
+    margin-top: 3rem; }
+  .header-primary__main {
+    width: 90% !important; }
+  .header-primary {
+    text-align: center; } }
 
 .footer {
   background-color: #333;
@@ -777,9 +783,10 @@ body {
   background: #2b2b2b;
   padding: 20rem 0 7rem;
   margin-top: -19rem;
+  background-image: url(../img/plane.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: 50% 50%; }
+  background-position: 50% 58%; }
 
 .section-about {
   padding: 25rem 5rem 5rem;
@@ -837,3 +844,23 @@ body {
     .contact .section-about .heading-secondary {
       font-size: 1.5rem;
       line-height: 1rem; } }
+
+@media screen and (max-width: 900px) {
+  .container {
+    margin-top: -23rem !important; }
+  .header-primary__main {
+    height: 60vh;
+    margin-top: 2rem; }
+  .header {
+    height: 85vh; } }
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin-top: -25rem !important; }
+  .header-primary__main {
+    height: 70vh;
+    margin-top: 2rem; }
+  .header {
+    height: 85vh; }
+  .section-work {
+    padding-top: 1rem; } }

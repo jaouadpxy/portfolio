@@ -62,6 +62,7 @@
 			-webkit-box-shadow: 1px 0px 15px 4px #000000;
 			box-shadow: 1px 0px 15px 4px #000000;
 			
+			
             
            
 		}
@@ -76,7 +77,6 @@
 			font-weight: 700;
 			color: $color-white;
 			letter-spacing: .5rem;
-			
 			line-height: 7rem;
 			
 }
@@ -149,7 +149,8 @@
 
 @media screen and (max-width: 1000px){
 	.header-primary{
-      width: 75em;
+	  max-width: 75em;
+	  width: 100%;
 	}
 	.header-primary--sub__title{
 	   font-size: 6rem;
@@ -179,6 +180,15 @@
 	}
 }
 
+
+@media screen and (max-width: 900px){
+	.secondmain {
+
+		padding-top : 7rem;
+	}
+
+}
+
 @media screen and (max-width: 600px){
 	
 	.secondmain {
@@ -194,6 +204,15 @@
 	.header__main {
 		width: 65% !important;
 		margin-top:3rem;
+		
+	}
+
+	.header-primary__main {
+		width: 90% !important;
+		
+	}
+	.header-primary {
+		text-align: center;
 	}
 }
 
